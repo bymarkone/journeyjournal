@@ -2,10 +2,10 @@
 
 echo "Running"
 
-rm natalia2.jj
+rm twdsl.js
 rm data.js
-curl -X POST -H Content-Type:text/plain --data-binary @natalia.jj localhost:8080/api/jarvis/editor >> natalia2.jj
-curl -X POST -H Content-Type:text/plain --data-binary @natalia2.jj localhost:8080/api/twdsl/editor
+curl -X POST -H Content-Type:text/plain --data-binary @source.jj localhost:8080/api/jarvis/editor >> twdsl.jj
+curl -X POST -H Content-Type:text/plain --data-binary @twdsl.jj localhost:8080/api/twdsl/editor
 
 echo "data = {" >> data.js
 
