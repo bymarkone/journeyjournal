@@ -1,0 +1,8 @@
+*.ipr
+*.iws
+*.iml
+.gradle
+build
+out
+node_modules
+bower_components

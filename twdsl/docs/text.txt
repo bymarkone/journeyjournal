@@ -1,0 +1,5 @@
+create Area Programming Languages
+create Capability Java with level Intermediate and Relevance high.
+set Expectation to be Java intermediate.
+receive Feedback from Fulana about Capability Java: fiodeback mais loco que o batman.
+create Action Item to read a book about Java.

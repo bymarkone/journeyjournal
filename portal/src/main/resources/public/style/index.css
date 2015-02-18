@@ -1,0 +1,78 @@
+#content {
+  margin: 0; }
+
+.review .review-tab {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  background-color: #fafafa; }
+  .review .review-tab ul {
+    padding: 50px 0px;
+    margin: 0px; }
+  .review .review-tab li {
+    display: inline;
+    list-style: none;
+    margin-left: 30px;
+    cursor: pointer; }
+    .review .review-tab li:first-child {
+      margin-left: 0; }
+    .review .review-tab li a:link, .review .review-tab li a:visited {
+      color: #000000;
+      text-decoration: none; }
+    .review .review-tab li a:hover {
+      color: grey; }
+    .review .review-tab li a:active {
+      color: darkblue; }
+.review .inner-section {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px; }
+  .review .inner-section p {
+    padding: 50px 0px;
+    font-size: 2em;
+    font-weight: 100;
+    width: 80%;
+    text-align: justify; }
+  .review .inner-section h1 {
+    font-size: 3em;
+    font-weight: 100;
+    margin-bottom: 100px; }
+.review #previous p:nth-child(even) {
+  padding-left: 200px; }
+.review #previous p:nth-child(odd) {
+  padding-right: 200px; }
+.review #retro h3 {
+  font-weight: 100;
+  font-size: 1.6em; }
+.review #retro li {
+  list-style: none;
+  font-weight: 100;
+  font-size: 1.3em;
+  line-height: 1.4em; }
+.review #feedback p {
+  padding: 2px;
+  font-size: 1.8em;
+  font-weight: 100;
+  width: 80%;
+  text-align: justify; }
+  .review #feedback p.bold {
+    font-weight: 500;
+    font-size: 2.5em; }
+.review #board p {
+  font-size: 1.4em; }
+  .review #board p strong {
+    font-weight: 500;
+    font-size: 1.6em; }
+  .review #board p i {
+    font-size: 1.6em; }
+.review #highlights li {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding: 20px 0px; }
+.review > section {
+  min-height: 500px;
+  padding-top: 150px; }
+  .review > section:nth-child(odd) {
+    background-color: #e0e0e0; }
