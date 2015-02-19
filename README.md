@@ -1,6 +1,6 @@
 # Journey Journal
 
-> Imagine that you have a virtual notebook where you take notes of **everything** related to your professional journey: plans, goals, events, evidences, feedbacks, projects, statistics, realisations, etc. Then you send this information to a language processing tool, and, as a result, you can easily and graphically visualise your journey so far, track or progress and changes, share a snapshot and even prepare a report to show in a job review you will have soon. 
+> Imagine that you have a virtual notebook where you take notes of **everything** related to your professional journey: plans, goals, events, evidences, feedbacks, projects, statistics, realisations, etc. Then you send this information to a language processing tool, and, as a result, you can easily and graphically visualise your journey so far, track your progress and changes, share a snapshot and even prepare a report to show in a job review you will have soon. 
 
 > How many of actually don't do that today using perhaps Evernote or Google Spreadsheets? The problem is, after some time and huge amount of information, manage all that, connect the dots, organise and easily build a report.
 
