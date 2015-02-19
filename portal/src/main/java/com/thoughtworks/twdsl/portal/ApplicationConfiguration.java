@@ -9,7 +9,6 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
-@ImportResource("classpath*:/application.xml")
 public class ApplicationConfiguration {
 
 

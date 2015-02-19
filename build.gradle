@@ -32,7 +32,7 @@ subprojects {
       maven { url "http://repo.spring.io/libs-release" }
     }
     dependencies {
-      classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.8.RELEASE' 
+      classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE'
       classpath 'me.champeau.gradle:antlr4-gradle-plugin:0.1'
     }
   }
@@ -48,12 +48,12 @@ subprojects {
 
   dependencies {
 
-    compile('org.springframework.boot:spring-boot-starter-web:1.1.8.RELEASE') {
+    compile('org.springframework.boot:spring-boot-starter-web:1.2.1.RELEASE') {
       exclude module: "spring-boot-starter-tomcat"
     }
 
-    compile 'org.springframework.boot:spring-boot-starter-jetty:1.1.8.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-actuator:1.1.8.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-jetty:1.2.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.1.RELEASE'
     compile 'org.springframework.hateoas:spring-hateoas:0.16.0.RELEASE'
     compile 'org.projectlombok:lombok:1.14.8'
     compile 'org.antlr:antlr4:4.3'
@@ -61,7 +61,7 @@ subprojects {
     testCompile 'junit:junit:4.11'
     testCompile 'org.mockito:mockito-all:1.10.8'
     testCompile 'com.jayway.jsonpath:json-path-assert:0.9.0'
-    testCompile 'org.springframework.boot:spring-boot-starter-test:1.1.8.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.2.1.RELEASE'
   }
 
   idea{

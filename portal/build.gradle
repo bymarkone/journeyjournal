@@ -1,5 +1,20 @@
 apply plugin: 'java'
 
+buildscript {
+  repositories {
+    maven { url "http://repo.spring.io/libs-release" }
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+  }
+}
+
+apply plugin: 'spring-boot'
+
+bootRepackage {
+  mainClass = "com.thoughtworks.twdsl.portal.Application"
+}
+
 dependencies {
   compile project(':jarvis')
   compile project(':twdsl')
