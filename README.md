@@ -2,7 +2,7 @@
 
 > Imagine that you have a virtual notebook where you take notes of **everything** related to your professional journey: plans, goals, events, evidences, feedbacks, projects, statistics, realisations, etc. Then you send this information to a language processing tool, and, as a result, you can easily and graphically visualise your journey so far, track your progress and changes, share a snapshot and even prepare a report to show in a job review you will have soon. 
 
-> How many of actually don't do that today using perhaps Evernote or Google Spreadsheets? The problem is, after some time and huge amount of information, manage all that, connect the dots, organise and easily build a report.
+> How many of actually don't do that today using perhaps Evernote or Google Spreadsheets? The problem is, after some time and lots of information, to manage all that, connecting the dots, organising and easily building a report.
 
 > We want to use DSL's and language processing features to allow you to do that in a much more straightforward way
 
@@ -112,7 +112,7 @@ receive Constructive Feedback from Neil: Should develop a way of talking with cl
 The way that the application works so far is by exposing some API's that will process the natural language text that describes someone's career (as explained in the [model]("#model")) and, ultimately, convert into a JSON data model that feeds some visualization tool. The complete process is described as follows:
 
 1. The user has a text input with the narrative of her plans, facts and feedbacks. 
-2. She runs a script that will send this text to the natural language processor via REST API (a very naive one for now) and returns the information converted to a script in a more formal DSL called TWDSL.
+2. She runs a script that will send this text to the natural language processor (a very naive one for now) via REST API and returns the information converted to a script in a more formal DSL called TWDSL.
 3. Then she runs another script that will send this text to the TWDSL compiler, that, in it's turn, will return a json with the information organised ready to be consumed by the view.
 4. Then the user copy this final file to the web application folder, that will automatically update the website that shows a) a timeline, b) a feedbacks section and c) an outline of the plan and objectives.
 
@@ -120,13 +120,13 @@ It's a simple but valuable flow that allowed us to validate lot's of the assumpt
 
 We are now moving on to the next phase of work, which is actually build a product of that. After lot's of conversations and an inception, we got to the idea that what we gradually want to build is:
 
-1. Better visualisations for the information we have right now. We are thinking, so far, in a more mature timeline, a roadmap of plans and objectives looking both to the future and to the accomplishment of what we had planned, a board where you can see capabilities and mission and easily even build some interaction with it, and a skill map to allow us to track our progress on several skills.
+1. **Better visualisations** for the information we have right now. We are thinking, so far, in a more **mature timeline**, a **roadmap of plans and objectives** looking both to the future and to the accomplishment of what we had planned, a **board where you can see capabilities and missions** and easily even build some interaction with it, and a **skill map** to allow us to track our progress on several skills.
 
-2. An online editor that would provide continuous feedback on the text being used to register all the information on one's journey. We are considering things as syntax highlight, auto-complete, help tools, samples, error messaging, suggestions, etc.
+2. An **online editor** that would provide continuous feedback on the text being used to register all the information on one's journey. We are considering things as **syntax highlight, auto-complete, help tools, samples, error messaging, suggestions, etc**.
 
-3. An account manager that would allow user registration and storing each one's text in a safe and private way. Eventually the user will be able to share with other specific users, and even make public if she wishes, some or all information about her journey.
+3. An **account manager** that would allow user registration and storing each one's text in a safe and private way. Eventually the user will be able to share with other specific users, and even make public if she wishes, some or all information about her journey.
 
-4. Who knows what the future reserves us, but... we would like to explore more on natural language processing, perhaps even connection with a voice recognition device. We would like also to create new and useful visualisations. We could start playing with the loads of text and information that this can give and provide more feedback to the user on his priorities. Perhaps make suggestions on what to do next. Who knows even adding time management functionalities that will bring help to micro manage our agendas to reach our plans. It is not by chance that the NLP module (as you will see below) is named Jarvis. :)
+4. Who knows what the future reserves us, but... we would like to explore more on natural language processing, perhaps even connection with a voice recognition device. We would like also to create new and useful visualisations. We could start playing with the loads of text and information that this can give and provide more feedback to the user on his priorities. Perhaps make suggestions on what he or she could do next. Who knows even adding time management functionalities that will bring help to micro manage our agendas to reach our plans. It is not by chance that the NLP module (as you will see below) is named Jarvis. :)
 
 <div id="architecture"/>
 ## Architecture
@@ -139,7 +139,7 @@ What we have right now is:
 2. A module (named, conveniently Jarvis) that provides functionality of converting the natural language (NLP) into the compiled language. Don't be too much impressed with this NLP, right now is just a language defined with an ugly static antlr grammar. I want to move it to a more intelligent regex matcher before moving on and adding some more advance NLP techniques.
 3. Another module (TWDSL) that is actually the compiler and interpreter of the DSL. It converts the text input into a semantic model first (see Fowler, Domain-Specific Languages) and then into a domain model.
 
-It might be useful to evolve this architecture into a Microservices one, allowing each different module for processing language run independently and have a public API that exposes it's features to the other world. This will allow to evolve the TWDSL and JARVIS independent from one another, add other type of NLP/Intelligent system (I pretty much enjoyed Samantha after watching Her), evolve JARVIS to me more than a Journey manager (I am putting some personal agenda and research here, I know this is ugly).
+It might be useful to evolve this architecture into a Microservices one, allowing each different module for processing language run independently and have a public API that exposes it's features to the outer world. This will allow evolving the TWDSL and JARVIS independent from one another, adding other type of NLP/Intelligent system (I pretty much enjoyed Samantha after watching Her), evolving JARVIS to me more than a Journey manager (I am putting some personal agenda and research here, I know this is ugly).
 
 
 <div id="technology"/>
