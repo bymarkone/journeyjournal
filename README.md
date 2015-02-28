@@ -14,7 +14,7 @@ And still, is a **laboratory**. At ThoughtWorks we try to create an environment 
 
 ### Colaborators
 
-Natalia Arsand (@nataliarsand), Filipi Pelz, Marcio Viegas, Jean Kichner (@opiazao), Tania Silva (@tdruiva), Alexandre Klaser (@alklaser), Ana Paula Machado, Pamela Rampanelli, José Mathias Gusso, Lourenço Soares (@protolous), Lucas Oliveira, Ricardo Miranda, Giordana Sfreddo, Carol Cintra and I (@bymarkone)- all from ThoughtWorks
+Natalia Arsand (*@nataliarsand*), Filipi Pelz, Marcio Viegas, Jean Kichner (*@opiazao*), Tania Silva (*@tdruiva*), Alexandre Klaser (*@alklaser*), Ana Paula Machado, Pamela Rampanelli, José Mathias Gusso, Lourenço Soares (*@protolous*), Lucas Oliveira, Ricardo Miranda, Giordana Sfreddo, Carol Cintra and I (*@bymarkone*) - all from ThoughtWorks
 
 ### What you will find here
 
