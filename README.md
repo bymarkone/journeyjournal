@@ -8,13 +8,13 @@
 
 Journey Journal, as a **product**, is an online Journal that would help people to plan, track and share their career journeys. 
 
-It is also an **experiment** with *Language-Driven Design (LDD)*. The idea behind LDD is using domain-specific languages as the chief conductor of the design and implementation of an application. We provided further details on it further down.
+It is also an **experiment** with *Language-Driven Design (LDD)*. The idea behind LDD is using domain-specific languages as the chief conductor of the design and implementation of an application. We provided more details on it further down.
 
 And still, is a **laboratory**. At ThoughtWorks we try to create an environment where people can exercise creativity and try new technologies, and this is one of them. Check out below what is the stuff that we are using or planning to use soon.
 
 ### Colaborators
 
-Natalia Arsand, Filipi Pelz, Marcio Viegas, Jean Kichner, Tania Silva, Alexandre Klaser, Ana Paula Machado, Pamela Rampanelli, José Mathias Gusso, Lourenço Soares, Lucas Oliveira, Ricardo Miranda, Giordana Sfreddo, Carol Cintra - all from ThoughtWorks
+Natalia Arsand (@nataliarsand), Filipi Pelz, Marcio Viegas, Jean Kichner (@opiazao), Tania Silva (@tdruiva), Alexandre Klaser (@alklaser), Ana Paula Machado, Pamela Rampanelli, José Mathias Gusso, Lourenço Soares (@protolous), Lucas Oliveira, Ricardo Miranda, Giordana Sfreddo, Carol Cintra and I (@bymarkone)- all from ThoughtWorks
 
 ### What you will find here
 
