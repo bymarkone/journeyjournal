@@ -1,0 +1,56 @@
+apply plugin: 'me.champeau.gradle.antlr4'
+
+configurations {
+  compile.extendsFrom antlr4
+  apiTestCompile.extendsFrom runtime
+}
+
+sourceSets {
+  main {
+    java {
+      srcDirs += antlr4.output
+    }
+  }
+  apiTest {
+    java {
+      srcDir 'src/api-test/java'
+    }
+    resources {
+      srcDir 'src/api-test/resources'
+    }
+    compileClasspath += sourceSets.main.runtimeClasspath
+  }
+}
+
+dependencies {
+  apiTestCompile 'com.jayway.jsonpath:json-path-assert:0.9.0'
+  apiTestCompile 'org.springframework.boot:spring-boot-starter-test:1.1.8.RELEASE'
+}
+
+antlr4 {
+  source = file('src/main/antlr')
+  output = file('src/main/java/com/thoughtworks/techdashboard/antlr')
+  listener = false
+  visitor = true
+  extraArgs = ['-package', 'com.thoughtworks.techdashboard.antlr']
+}
+
+task apiTest(type: Test) {
+  testLogging {
+    events "passed", "skipped", "failed", "standardOut", "standardError"
+    exceptionFormat "full"
+    showStandardStreams = true
+  }
+
+  testClassesDir = sourceSets.apiTest.output.classesDir
+  classpath += sourceSets.apiTest.runtimeClasspath
+}
+
+idea {
+  module {
+    testSourceDirs += file('src/api-test/java')
+    testSourceDirs += file('src/api-test/resources')
+  }
+}
+
+compileJava.dependsOn antlr4
