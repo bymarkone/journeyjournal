@@ -1,8 +1,8 @@
 grammar Dashboard;
 
 lines: line+;
-line: city project techLead technology businessDomain END_LINE ;
-city: CHEVRON COLON ID;
+line: (city | project | techLead | technology | businessDomain) END_LINE ;
+city: CHEVRON ID;
 account: TWO_DASHES ACCOUNT COLON ID;
 project: PROJECT COLON ID;
 techLead: TECH_LEAD COLON ID;

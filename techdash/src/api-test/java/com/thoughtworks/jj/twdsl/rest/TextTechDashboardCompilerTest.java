@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
 @SpringApplicationConfiguration(classes = TechDashboardApplication.class)
 @WebAppConfiguration
 @ActiveProfiles("test")
-public class TextTwDslCompilerTest {
+public class TextTechDashboardCompilerTest {
 
   private MockMvc mockMvc;
 
@@ -36,14 +36,25 @@ public class TextTwDslCompilerTest {
   }
 
   @Test
-  public void createsAnArea() throws Exception {
-    String script = "create Area Programming Languages with level Intermediate.";
+  public void createsACity() throws Exception {
+    String script = "> Recife\n";
     mockMvc.perform(post("/api/tech-dashboard/editor").content(script))
         .andExpect(status().isOk());
 
-    mockMvc.perform(get("/api/jj/area"))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$[0].name", is("Programming Languages")));
+    mockMvc.perform(get("/api/tech-dashboard/city"))
+        .andExpect(jsonPath("$[0].name", is("Recife")))
+        .andExpect(status().isOk());
+  }
+
+  @Test
+  public void createsAnAccount() throws Exception {
+    String script = "> Recife\n-- Account: SouthWest\n";
+    mockMvc.perform(post("/api/tech-dashboard/editor").content(script))
+        .andExpect(status().isOk());
+
+    mockMvc.perform(get("/api/tech-dashboard/city/Recife"))
+        .andExpect(jsonPath("$[0].name", is("Recife")))
+        .andExpect(status().isOk());
   }
 
 }

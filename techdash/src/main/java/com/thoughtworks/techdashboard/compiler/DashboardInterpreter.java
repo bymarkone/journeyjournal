@@ -21,7 +21,7 @@ public class DashboardInterpreter extends DashboardBaseVisitor<Void> {
 
   @Override
   public Void visitCity(@NotNull DashboardParser.CityContext ctx) {
-    City city = new City(ctx.ID().getText());
+    City city = new City(ctx.ID().getText().trim());
     dashboard.getCities().add(city);
     lastCity = city;
     return super.visitCity(ctx);

@@ -1,4 +1,4 @@
-// Generated from /Users/msilveir/personal/Dropbox/marcos/p2/dashboard/src/main/antlr/Dashboard.g4 by ANTLR 4.2.2
+// Generated from /Users/msilveir/personal/Dropbox/marcos/source/journeyjournal/techdash/src/main/antlr/Dashboard.g4 by ANTLR 4.2.2
 package com.thoughtworks.techdashboard.antlr;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
