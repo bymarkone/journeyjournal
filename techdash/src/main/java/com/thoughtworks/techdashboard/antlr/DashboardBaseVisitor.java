@@ -18,6 +18,14 @@ public class DashboardBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitMarket(@NotNull DashboardParser.MarketContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitCity(@NotNull DashboardParser.CityContext ctx) { return visitChildren(ctx); }
 
 	/**
@@ -67,6 +75,14 @@ public class DashboardBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitLines(@NotNull DashboardParser.LinesContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitType(@NotNull DashboardParser.TypeContext ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}

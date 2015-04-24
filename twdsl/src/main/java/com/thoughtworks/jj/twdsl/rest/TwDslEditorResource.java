@@ -16,7 +16,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("/api/twdsl/editor")
 public class TwDslEditorResource {
 
-    private com.thoughtworks.jj.twdsl.compiler.TwDslCompiler twDslCompiler;
+    private TwDslCompiler twDslCompiler;
 
     @Autowired
     public TwDslEditorResource(TwDslCompiler twDslCompiler) {

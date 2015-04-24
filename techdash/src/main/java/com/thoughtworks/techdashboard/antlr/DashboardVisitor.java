@@ -12,6 +12,13 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface DashboardVisitor<T> extends ParseTreeVisitor<T> {
 	/**
+	 * Visit a parse tree produced by {@link DashboardParser#market}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMarket(@NotNull DashboardParser.MarketContext ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link DashboardParser#city}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -59,6 +66,13 @@ public interface DashboardVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitLines(@NotNull DashboardParser.LinesContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link DashboardParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType(@NotNull DashboardParser.TypeContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link DashboardParser#account}.

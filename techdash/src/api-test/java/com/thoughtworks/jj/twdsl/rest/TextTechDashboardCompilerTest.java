@@ -48,12 +48,32 @@ public class TextTechDashboardCompilerTest {
 
   @Test
   public void createsAnAccount() throws Exception {
-    String script = "> Recife\n-- Account: SouthWest\n";
+    String script = "> Recife\n-- Account: Bank\n";
     mockMvc.perform(post("/api/tech-dashboard/editor").content(script))
         .andExpect(status().isOk());
 
-    mockMvc.perform(get("/api/tech-dashboard/city/Recife"))
-        .andExpect(jsonPath("$[0].name", is("Recife")))
+    mockMvc.perform(get("/api/tech-dashboard/city/Recife/account"))
+        .andExpect(jsonPath("$[0].name", is("Bank")))
+        .andExpect(status().isOk());
+  }
+
+  @Test
+  public void createsAProject() throws Exception {
+    String script = "> Recife\n-- Account: BigBank\n" +
+        "Project: EDO\n" +
+        "|- TechLeads: Froes, Girão\n" +
+        "|- BusinessDomains: Banking\n" +
+        "|- Technologies: Java, Java Web\n";
+    mockMvc.perform(post("/api/tech-dashboard/editor").content(script))
+        .andExpect(status().isOk());
+
+    mockMvc.perform(get("/api/tech-dashboard/city/Recife/account/BigBank/project"))
+        .andExpect(jsonPath("$[0].name", is("EDO")))
+        .andExpect(jsonPath("$[0].techLeads[0]", is("Froes")))
+        .andExpect(jsonPath("$[0].techLeads[1]", is("Girão")))
+        .andExpect(jsonPath("$[0].technologies[0]", is("Java")))
+        .andExpect(jsonPath("$[0].technologies[1]", is("Java Web")))
+        .andExpect(jsonPath("$[0].businessDomains[0]", is("Banking")))
         .andExpect(status().isOk());
   }
 
