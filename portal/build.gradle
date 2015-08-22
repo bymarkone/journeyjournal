@@ -18,5 +18,4 @@ bootRepackage {
 dependencies {
   compile project(':jarvis')
   compile project(':twdsl')
-  compile project(':techdash')
 }
