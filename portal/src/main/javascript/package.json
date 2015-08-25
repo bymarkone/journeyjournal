@@ -1,18 +1,21 @@
 {
   "name": "journeyjournal",
   "version": "1.0.0",
-  "description": "A Journal for your Journey",
-  "main": "gulpfile.js",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:bundle && npm run build:static",
+    "build:bundle": "webpack --devtool source-map --cash --colors --progress",
+    "build:static": "cp app/index.html dist/index.html"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "gulp": "~3.8.10"
+    "react": "^0.13.3",
+    "webpack": "^1.12.0"
   },
   "devDependencies": {
-    "bower-files": "~3.2.0",
-    "gulp-sass": "~1.3.2"
-  },
-  "scripts": {
-    "test": "test"
-  },
-  "author": "Marcos Vinicius",
-  "license": "ISC"
+    "jsx-loader": "^0.13.2"
+  }
 }
