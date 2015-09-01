@@ -1,4 +1,4 @@
-// Generated from /Users/msilveir/personal/Dropbox/marcos/source/journeyjournal/twdsl/src/main/antlr/TwDsl.g4 by ANTLR 4.2.2
+// Generated from /Users/aarni/Documents/tw/journeyjournal/twdsl/src/main/antlr/TwDsl.g4 by ANTLR 4.2.2
 package com.thoughtworks.jj.twdsl.antlr;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
