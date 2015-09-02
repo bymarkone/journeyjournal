@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:less && npm run build:bundle && npm run build:static",
     "build:less": "lessc app/stylesheets/index.less dist/stylesheets/index.css",
+    "build:static": "rsync -a --prune-empty-dirs --include '*/' --include '*.html' --include '*.png' --include '*.jpeg' --exclude '*' app/ dist/",
     "build:bundle": "webpack --devtool source-map --cash --colors --progress",
-    "build:static": "cp app/index.html dist/index.html",
     "serve-dev": "webpack-dev-server --colors --progress --content-base dist/"
   },
   "author": "",

@@ -1,13 +1,24 @@
-'use strict'
-var React = require('react')
-var Hello = require('./hello')
-var Codemirror = require('react-codemirror')
+'use strict';
+var React = require('react');
+var Codemirror = require('react-codemirror');
+var TopBar = require('./top-bar');
 
 var options = {
   theme: 'base16-light',
   lineNumbers: true
 }
 
-React.render(<Hello />, document.getElementById('content'))
-React.render(<Codemirror options={options} />, document.getElementById('codemirror-wrapper'))
+var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <TopBar />
+        <Codemirror options={options} />
+      </div>
+    )
+  }
+});
+
+React.render(<App />, document.body);
+
 
