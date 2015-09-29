@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "src": "src/main/javascript",
+    "dist": "dist"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:less && npm run build:bundle && npm run build:static",
-    "build:less": "lessc app/stylesheets/index.less dist/stylesheets/index.css",
-    "build:static": "rsync -a --prune-empty-dirs --include '*/' --include '*.html' --include '*.png' --include '*.jpeg' --exclude '*' app/ dist/",
+    "build:less": "lessc ${npm_package_config_src}/stylesheets/index.less ${npm_package_config_dist}/stylesheets/index.css",
+    "build:static": "rsync -a --prune-empty-dirs --include '*/' --include '*.html' --include '*.png' --include '*.jpeg' --exclude '*' ${npm_package_config_src}/ ${npm_package_config_dist}/",
     "build:bundle": "webpack --devtool source-map --cash --colors --progress",
-    "serve-dev": "webpack-dev-server --colors --progress --content-base dist/"
+    "serve-dev": "webpack-dev-server --colors --progress --content-base ${npm_package_config_dist}/"
   },
   "author": "",
   "license": "ISC",

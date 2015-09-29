@@ -8,3 +8,4 @@ node_modules
 bower_components
 dist
 .idea
+portal/npm-debug.log
