@@ -9,8 +9,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: 'jsx-loader?insertPragma=React.DOM&harmony' },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      { test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'babel-loader' },
+      { test: /\.css$/, loader: "style!css" }
     ]
   },
   resolve: {
