@@ -5,10 +5,10 @@ var Codemirror = require("codemirror");
 if (!Array.prototype.find) {
   Array.prototype.find = function(predicate) {
     if (this === null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
+      throw new TypeError("Array.prototype.find called on null or undefined");
     }
-    if (typeof predicate !== 'function' ) {
-      throw new TypeError('predicate must be a function');
+    if (typeof predicate !== "function" ) {
+      throw new TypeError("predicate must be a function");
     }
     var list = Object(this);
     var length = list.length >>> 0;
@@ -28,18 +28,18 @@ if (!Array.prototype.find) {
 var StateGuesser = (function() {
 
   var actualStates = {
-    'CAPABILITY_DESCRIPTOR': 'capabilityPhrase',
-    'GOALS_DESCRIPTOR': 'goalsStartPhrase',
-    'HIGHLIGH_DESCRIPTOR': 'highlightPhrase',
-    'TASKS_DESCRIPTOR': 'howToPhrase',
-    'DIGIT': 'goalPhrase',
-    'TOPIC_DESCRIPTOR': 'topicPhrase',
-    'GREAT_FEEDBACK_DESCRIPTOR': 'greatFeedbackPhrase',
-    'CONSTRUCTIVE_FEEDBACK_DESCRIPTOR': 'constructiveFeedbackPhase',
-    'FROM_DESCRIPTOR': 'fromPhrase',
-    'DASH': 'itemPhrase',
-    'IDENTIFIER': 'itemPhrase',
-    'CONNECTOR': 'missionDescription'
+    "CAPABILITY_DESCRIPTOR": "capabilityPhrase",
+    "GOALS_DESCRIPTOR": "goalsStartPhrase",
+    "HIGHLIGH_DESCRIPTOR": "highlightPhrase",
+    "TASKS_DESCRIPTOR": "howToPhrase",
+    "DIGIT": "goalPhrase",
+    "TOPIC_DESCRIPTOR": "topicPhrase",
+    "GREAT_FEEDBACK_DESCRIPTOR": "greatFeedbackPhrase",
+    "CONSTRUCTIVE_FEEDBACK_DESCRIPTOR": "constructiveFeedbackPhase",
+    "FROM_DESCRIPTOR": "fromPhrase",
+    "DASH": "itemPhrase",
+    "IDENTIFIER": "itemPhrase",
+    "CONNECTOR": "missionDescription"
   };
 
   return {
@@ -51,10 +51,10 @@ var StateGuesser = (function() {
 })();
 
 var Jarvis = function(options, modeOptions) {
-  var NameChar = new RegExp(['[0-9|_|\u00B7|\u0300-\u036F|\u203F-\u2040',
-        '|A-Z|a-z|\u00C0-\u00D6|\u00D8-\u00F6|\u00F8-\u02FF',
-        '|\u0370-\u037D|\u037F-\u1FFF|\u200C-\u200D|\u2070-\u218F',
-        '|\u2C00-\u2FEF|\u3001-\uD7FF|\uF900-\uFDCF|\uFDF0-\uFFFD]+'].join(''));
+  var NameChar = new RegExp(["[0-9|_|\u00B7|\u0300-\u036F|\u203F-\u2040",
+        "|A-Z|a-z|\u00C0-\u00D6|\u00D8-\u00F6|\u00F8-\u02FF",
+        "|\u0370-\u037D|\u037F-\u1FFF|\u200C-\u200D|\u2070-\u218F",
+        "|\u2C00-\u2FEF|\u3001-\uD7FF|\uF900-\uFDCF|\uFDF0-\uFFFD]+"].join(""));
 
   var tokensDef = [
     {name: "CAPABILITY_DESCRIPTOR", regex: /\s*I want to be a |I want to be an /},
@@ -90,7 +90,6 @@ var Jarvis = function(options, modeOptions) {
     },
     token: function(stream, state) {
       var type = tokenizer(stream, state);
-      console.log(type);
       return type;
 
     }
