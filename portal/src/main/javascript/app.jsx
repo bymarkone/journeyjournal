@@ -1,17 +1,16 @@
-'use strict';
-var React = require('react');
-var Codemirror = require('react-codemirror');
-var TopBar = require('./top-bar');
-require('./jarvis');
+import React from 'react';
+import Codemirror from 'react-codemirror';
+import TopBar from './top-bar.jsx';
+import Jarvis from './jarvis.js';
 
-var options = {
+let options = {
   theme: 'base16-light',
   lineNumbers: true,
   mode: 'jarvis'
 }
 
-var App = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
       <div>
         <TopBar />
@@ -20,7 +19,4 @@ var App = React.createClass({
     )
   }
 });
-
-React.render(<App />, document.body);
-
 
