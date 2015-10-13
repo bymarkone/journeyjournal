@@ -1,5 +1,5 @@
 import React from 'react';
-import Codemirror from 'react-codemirror';
+import JJEditor from './jj-editor.jsx';
 import TopBar from './top-bar.jsx';
 import Jarvis from './jarvis.js';
 import { Provider } from 'react-redux';
@@ -13,8 +13,8 @@ let options = {
   mode: 'jarvis'
 }
 
-var storeWithMiddlewareFactory = applyMiddleware(thunkMiddleware)(createStore);
-var store = storeWithMiddlewareFactory(reducers);
+let storeWithMiddlewareFactory = applyMiddleware(thunkMiddleware)(createStore);
+let store = storeWithMiddlewareFactory(reducers);
 
 export default React.createClass({
   render() {
@@ -23,7 +23,7 @@ export default React.createClass({
         {
           () => <div>
               <TopBar />
-              <Codemirror options={options} />
+              <JJEditor options={options} />
             </div>
         }
       </Provider>

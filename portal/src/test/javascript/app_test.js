@@ -1,7 +1,7 @@
 import React from 'react/addons';
 import { expect } from 'chai';
 import App from 'app.jsx';
-import Codemirror from 'react-codemirror';
+import JJEditor from 'jj-editor.jsx';
 import TopBar from 'top-bar.jsx';
 
 const TestUtils = React.addons.TestUtils;
@@ -16,6 +16,6 @@ describe('Loads app', () => {
   it('renders codemirror', () => {
     let rendered = TestUtils.renderIntoDocument(<App />);
 
-    expect(TestUtils.findRenderedComponentWithType(rendered, Codemirror)).to.be.an('object');
+    expect(TestUtils.findRenderedComponentWithType(rendered, JJEditor)).to.be.an('object');
   });
 });
