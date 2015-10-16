@@ -7,12 +7,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import reducers from './reducers.js';
 
-let options = {
-  theme: 'base16-light',
-  lineNumbers: true,
-  mode: 'jarvis'
-}
-
 let storeWithMiddlewareFactory = applyMiddleware(thunkMiddleware)(createStore);
 let store = storeWithMiddlewareFactory(reducers);
 
@@ -23,7 +17,7 @@ export default React.createClass({
         {
           () => <div>
               <TopBar />
-              <JJEditor options={options} />
+              <JJEditor />
             </div>
         }
       </Provider>

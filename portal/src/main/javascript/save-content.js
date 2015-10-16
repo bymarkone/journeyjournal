@@ -1,19 +1,12 @@
-let startSaving = () => {
+export function startSaving() {
   return {
     type: 'START_SAVING'
   };
-};
+}
 
-let saved = () => {
+export function saved(text) {
   return {
-    type: 'SAVED'
+    type: 'SAVED',
+    content: text
   };
-};
-
-export default () => {
-  return (dispatch) => {
-    dispatch(startSaving());
-
-    return dispatch(saved());
-  }
 }
