@@ -1,6 +1,5 @@
 import React from 'react';
 import JJEditor from './jj-editor.jsx';
-import TopBar from './top-bar.jsx';
 import Jarvis from './jarvis.js';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -15,10 +14,7 @@ export default React.createClass({
     return (
       <Provider store={store}>
         {
-          () => <div>
-              <TopBar />
-              <JJEditor />
-            </div>
+          () => <JJEditor />
         }
       </Provider>
     )

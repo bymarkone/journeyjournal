@@ -1,13 +1,13 @@
 import React from 'react/addons';
 import { expect } from 'chai';
-import App from 'App.jsx';
+import JourneyJournal from 'journeyjournal.jsx';
 import JJEditor from 'jj-editor.jsx';
 import Codemirror from 'react-codemirror';
 
 const TestUtils = React.addons.TestUtils;
 
 describe('Creates editor', () => {
-  let rendered = TestUtils.renderIntoDocument(<App />);
+  let rendered = TestUtils.renderIntoDocument(<JourneyJournal />);
   let editor = TestUtils.findRenderedComponentWithType(rendered, JJEditor);
   let button = TestUtils.findRenderedDOMComponentWithTag(rendered, "button");
   let codemirror = TestUtils.findRenderedComponentWithType(rendered, Codemirror);
