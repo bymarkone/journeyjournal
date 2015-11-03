@@ -1,4 +1,5 @@
 import React from 'react';
+import x from 'codemirror';
 import Codemirror from 'react-codemirror';
 import { connect } from 'react-redux';
 import { startSaving, saved } from './save-content.js';
@@ -22,12 +23,12 @@ let options = {
   mode: 'jarvis'
 }
 
-class JJEditor extends React.Component {
+export class JJEditor extends React.Component {
   saveChanges() {
     this.props.save(this.codemirror._currentCodemirrorValue);
   }
   render() {
-    let content = this.props.content;
+    let content = this.props.content || '';
     return (
       <div>
         <Codemirror options={options} value={content} ref={(ref) => this.codemirror = ref} />

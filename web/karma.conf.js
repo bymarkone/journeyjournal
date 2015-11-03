@@ -10,13 +10,14 @@ module.exports = function(config) {
     webpack: {
       module: {
         loaders: [
+          { test: /codemirror.js$/, loader: 'babel-loader' },
           { test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'babel-loader' },
           { test: /\.css$/, loader: "style!css" }
         ]
       },
       resolve: {
         modulesDirectories: [
-          "src/main/javascript",
+          "src",
           "node_modules"
         ]
       }

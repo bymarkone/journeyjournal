@@ -2,7 +2,7 @@ import React from 'react';
 import JourneyJournal from './journeyjournal.jsx';
 import TopBar from './top-bar.jsx';
 
-class App extends React.component {
+let App = React.createClass({
   render() {
     return (
       <div>
@@ -11,6 +11,6 @@ class App extends React.component {
       </div>
     )
   }
-}
+});
 
 React.render(<App />, document.body);
